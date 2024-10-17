@@ -1,10 +1,6 @@
 # Taller01-Ramas
 
-https://drive.google.com/file/d/1jYlcEo51xeyoxR4M8ZL-r6MwWw4tmP3O/view?usp=sharing (link de la captura)
+# Rama TÃ­tulo:
+DescripciÃ³n: Se abriÃ³ el archivo â€œprimary.fxmlâ€ y se cambiÃ³ el tÃ­tulo â€œTop 10â€ por â€œBest Sellersâ€.
 
-Descripción: Se abrió el archivo “primary.fxml” y se cambió el título “Top 10” por “Best Sellers”.
-
-
-
-
-
+# Rama DuraciÃ³n:
