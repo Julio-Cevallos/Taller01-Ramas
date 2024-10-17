@@ -17,6 +17,7 @@ public class Cancion implements Comparable<Cancion> {
 
     private String titulo;
     private String cantante;
+    private String duracion;
 
     private String imagen;
     private int posActual; //la posicion actual en el ranking
@@ -25,9 +26,10 @@ public class Cancion implements Comparable<Cancion> {
     private int semanas;
     private List<Integer> historialPos; //lista con todas las posiciones que ha tenido en el ranking
 
-    public Cancion(String titulo, String cantante, String imagen, int posActual, int posPrevia, int semanas, List<Integer> historialPos) {
+    public Cancion(String titulo, String cantante, String duracion, String imagen, int posActual, int posPrevia, int semanas, List<Integer> historialPos) {
         this.titulo = titulo;
         this.cantante = cantante;
+        this.duracion = duracion;
         this.imagen = imagen;
         this.posActual = posActual;
         this.posPrevia = posPrevia;
@@ -42,6 +44,10 @@ public class Cancion implements Comparable<Cancion> {
 
     public String getCantante() {
         return cantante;
+    }
+    
+    public String getDuracion(){
+        return duracion;
     }
 
     public String getImagen() {
@@ -72,12 +78,12 @@ public class Cancion implements Comparable<Cancion> {
             String linea = "";
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(";");
-                String[] historial = datos[6].split("-");
+                String[] historial = datos[7].split("-");
                 ArrayList<Integer> listaHistorial = new ArrayList<>();
                 for (String h:historial){
                     listaHistorial.add(Integer.valueOf(h));
                 }
-                Cancion c = new Cancion(datos[0], datos[1], datos[2], Integer.valueOf(datos[3]), Integer.valueOf(datos[4]), Integer.valueOf(datos[5]),  listaHistorial);
+                Cancion c = new Cancion(datos[0], datos[1], datos[2], datos[3], Integer.valueOf(datos[4]), Integer.valueOf(datos[5]), Integer.valueOf(datos[6]),  listaHistorial);
                 lista.add(c);
             }
         } catch (FileNotFoundException ex) {
