@@ -91,7 +91,7 @@ public class Cancion implements Comparable<Cancion> {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
+        /* This is a commentary */
         /*  String s = "20,4,3,2,1,1,1,1,1,1,1,1";
         Cancion c = new Cancion("Anti-Hero","TayLor Swift","antihero.jpg",1,1,1,12,new ArrayList<>(Arrays.asList(s.split(","))));
         lista.add(c);
@@ -103,7 +103,7 @@ public class Cancion implements Comparable<Cancion> {
 
     @Override
     public int compareTo(Cancion o) {
-        return posActual - o.posActual;
+        return o.posActual -  posActual ;
     }
 
 }
